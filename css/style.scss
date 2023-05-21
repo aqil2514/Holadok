@@ -1,0 +1,186 @@
+$bg-dokter: #9beae0;
+$bg-primary: #203271;
+$bg-bold-teks: #101c45;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+@mixin horizontal-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  @include horizontal-flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 4rem;
+  z-index: 999;
+
+  #logo-title {
+    @include horizontal-flex;
+
+    img {
+      width: 26px;
+      height: 26px;
+    }
+
+    h3 {
+      color: $bg-bold-teks;
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  #nav {
+    @include horizontal-flex();
+    margin-left: -10rem;
+
+    h3 {
+      margin: 0 2rem;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    .nav-active {
+      opacity: 1;
+      cursor: default;
+    }
+  }
+
+  #login-booknow {
+    @include horizontal-flex();
+    margin-right: 3rem;
+
+    h3 {
+      cursor: pointer;
+      margin: 0 2rem;
+    }
+
+    #booknow {
+      padding: 0.4rem 1rem;
+      border: 0.1rem solid $bg-bold-teks;
+    }
+  }
+}
+
+#kotak-dokter {
+  #kotak {
+    position: absolute;
+    right: 0;
+    top: 1%;
+    transform-origin: top;
+    transform: scaleY(0.7);
+    z-index: -2;
+  }
+  #dokter {
+    position: absolute;
+    right: 10px;
+    top: -130px;
+    transform: scale(0.6);
+    z-index: -1;
+  }
+}
+
+#comment {
+  width: 25rem;
+  height: 11rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  position: absolute;
+  right: 30%;
+  top: 15%;
+
+  figure {
+    @include horizontal-flex();
+    margin-top: 20px;
+    margin-left: 20px;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    figcaption {
+      margin-top: 15px;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+  }
+
+  #kutip {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  p {
+    text-align: justify;
+    margin-top: 0.5rem;
+  }
+}
+
+#hero {
+  width: 30%;
+  margin-left: 5rem;
+  margin-top: 1rem;
+  h2 {
+    color: $bg-primary;
+    font-size: 48px;
+    text-align: justify;
+  }
+  p {
+    margin-top: 2rem;
+    font-size: 18px;
+    text-align: justify;
+  }
+  button {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: $bg-primary;
+    border: none;
+    color: #fff;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover {
+    transform: scale(1.2);
+  }
+}
+
+footer {
+  @include horizontal-flex();
+  justify-content: space-between;
+  background-color: $bg-primary;
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 95%;
+  color: #fff;
+
+  div {
+    width: 27%;
+    position: relative;
+    left: 30px;
+  }
+
+  .footer-img {
+    position: absolute;
+    left: -50px;
+    top: -5px;
+  }
+}
+
+@media (max-width: 1220px) {
+  body {
+    display: none;
+  }
+}

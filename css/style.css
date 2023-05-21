@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 4rem;
+  z-index: 999;
+}
+nav #logo-title {
+  display: flex;
+  flex-direction: row;
+}
+nav #logo-title img {
+  width: 26px;
+  height: 26px;
+}
+nav #logo-title h3 {
+  color: #101c45;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+nav #nav {
+  display: flex;
+  flex-direction: row;
+  margin-left: -10rem;
+}
+nav #nav h3 {
+  margin: 0 2rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+nav #nav .nav-active {
+  opacity: 1;
+  cursor: default;
+}
+nav #login-booknow {
+  display: flex;
+  flex-direction: row;
+  margin-right: 3rem;
+}
+nav #login-booknow h3 {
+  cursor: pointer;
+  margin: 0 2rem;
+}
+nav #login-booknow #booknow {
+  padding: 0.4rem 1rem;
+  border: 0.1rem solid #101c45;
+}
+
+#kotak-dokter #kotak {
+  position: absolute;
+  right: 0;
+  top: 1%;
+  transform-origin: top;
+  transform: scaleY(0.7);
+  z-index: -2;
+}
+#kotak-dokter #dokter {
+  position: absolute;
+  right: 10px;
+  top: -130px;
+  transform: scale(0.6);
+  z-index: -1;
+}
+
+#comment {
+  width: 25rem;
+  height: 11rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  position: absolute;
+  right: 30%;
+  top: 15%;
+}
+#comment figure {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#comment figure img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+#comment figure figcaption {
+  margin-top: 15px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+#comment #kutip {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+#comment p {
+  text-align: justify;
+  margin-top: 0.5rem;
+}
+
+#hero {
+  width: 30%;
+  margin-left: 5rem;
+  margin-top: 1rem;
+}
+#hero h2 {
+  color: #203271;
+  font-size: 48px;
+  text-align: justify;
+}
+#hero p {
+  margin-top: 2rem;
+  font-size: 18px;
+  text-align: justify;
+}
+#hero button {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #203271;
+  border: none;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#hero button:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #203271;
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 95%;
+  color: #fff;
+}
+footer div {
+  width: 27%;
+  position: relative;
+  left: 30px;
+}
+footer .footer-img {
+  position: absolute;
+  left: -50px;
+  top: -5px;
+}
+
+@media (max-width: 1220px) {
+  body {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
